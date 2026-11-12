@@ -1,4 +1,6 @@
+# ---------------------------------------------------------------
 # Python
+# ---------------------------------------------------------------
 __pycache__/
 *.py[cod]
 *$py.class
@@ -10,8 +12,8 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
+/lib/
+/lib64/
 parts/
 sdist/
 var/
@@ -19,34 +21,98 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+pip-wheel-metadata/
 
-# Environment
+# Test / lint / type-check caches and coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Notebooks
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------
+# Node / Next.js (frontend, if added)
+# ---------------------------------------------------------------
+node_modules/
+.next/
+out/
+.turbo/
+.vercel/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------------------------------------------------------------
+# Environment and secrets (never commit)
+# ---------------------------------------------------------------
 .env
+.env.*
+!.env.example
 .venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+*.pem
+*.key
+*.p12
+*.pfx
+credentials
+credentials.json
 
+# ---------------------------------------------------------------
 # Data
+# ---------------------------------------------------------------
 *.sqlite3
 *.db
 
+# ---------------------------------------------------------------
+# AWS / deployment artifacts
+# ---------------------------------------------------------------
+.aws/
+.aws-sam/
+cdk.out/
+.serverless/
+# Lambda packaging output
+package/
+lambda_package/
+*.zip
+
+# Terraform / OpenTofu (state can contain secrets)
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+!*.tfvars.example
+
+# ---------------------------------------------------------------
+# Logs
+# ---------------------------------------------------------------
+*.log
+logs/
+
+# ---------------------------------------------------------------
 # IDE
+# ---------------------------------------------------------------
 .idea/
 .vscode/
 *.swp
 *.swo
 
-# AWS
-.aws/
-.aws-sam/
-
-# Logs
-*.log
-logs/
-
+# ---------------------------------------------------------------
 # OS specific
+# ---------------------------------------------------------------
 .DS_Store
 Thumbs.db
+Desktop.ini
