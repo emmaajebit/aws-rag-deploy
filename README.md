@@ -35,6 +35,8 @@ pip install -e .
 python create_db.py
 ```
 
+The vector database is not committed. Run this after cloning and before packaging/deploying.
+
 To reset the database:
 ```bash
 python create_db.py --reset
@@ -57,7 +59,7 @@ print(response.response_text)
   - `query_rag.py` - RAG query processing logic
 - `src/data/` - Data directories
   - `source/` - Source PDF documents
-  - `chroma/` - ChromaDB vector database
+  - `chroma/` - ChromaDB vector database (generated, git-ignored; build with `python create_db.py`)
 
 ## Configuration
 

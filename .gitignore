@@ -75,6 +75,8 @@ credentials.json
 # ---------------------------------------------------------------
 *.sqlite3
 *.db
+# Generated vector index; rebuild with `python create_db.py`
+src/data/chroma/
 
 # ---------------------------------------------------------------
 # AWS / deployment artifacts

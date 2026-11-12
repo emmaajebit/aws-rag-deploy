@@ -1,7 +1,11 @@
+from pathlib import Path
+
 from langchain_community.vectorstores import Chroma
 from src.rag_app.get_embeddings import get_embedding_function
 
-CHROMA_PATH = "data/chroma"
+# Resolved relative to this file so it matches create_db.py (src/data/chroma)
+# regardless of the working directory (repo root, src/, or Lambda task root).
+CHROMA_PATH = str(Path(__file__).resolve().parent.parent / "data" / "chroma")
 CHROMA_DB_INSTANCE = None  # Reference to singleton instance of ChromaDB
 
 
